@@ -11,4 +11,4 @@ Anhand einer Software kann die Abteilung ihre Termine verwalten und direkt in di
 * Umwandlung in ical-Datei um Einbindung in Kalender zu ermöglichen
 
 ## Flussdiagramm V1
-[!Flowdiagramm PROG2](plannerbrunch/docs/flow.jpg "Flow diagram")
+![Flowdiagramm PROG2](plannerbrunch/docs/flow.jpg "Flow diagram")
