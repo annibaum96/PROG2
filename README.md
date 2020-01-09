@@ -5,10 +5,12 @@ In der Pfadi Abteilung Belp gibt es viel zu organisieren. Jährlich treffen sich
 ## Idee
 Anhand einer Software kann die Abteilung ihre Termine verwalten und direkt in die Kalender eintragen lassen. Ausserdem sollen Kollisionen vermieden werden. Die einzelnen Termine werden eingespiesen (entweder anhand einer csv-Datei oder in der Software selbst), die betroffene Stufe (Leiter, Hilfs-Leiter, Abteilungsleitung, Vorstand oder alle) und das Datum/Uhrzeit wird zugewiesen. So können Doppelspurigkeiten erkannt werden. Am Ende kann jeder per Link die Termin in seinen digitalen Kalender einbinden. Es muss noch ausgearbeteitet werden, für wen welche Termine sichtbar sein sollen. Das MVP ist dabei sicher, dass alle jeden Termin sehen. In der Software jedoch vorab die Abgleichung stattfindet der Stufen. 
 
-## Anforderungen
+## Anforderungen (MVP)
 * Einlesen/Erfassen und Abspeichern der Termine
-* Zuordnung der verantwortlichen Stufen inklusive Prüfung der Doppelbuchung
-* Umwandlung in ical-Datei um Einbindung in Kalender zu ermöglichen
+* Löschen ausgewählter Termine 
+* Zuordnung der verantwortlichen Stufen (Verantwortung)
+* Export in Kalender
+* Anzeige einer Übersicht alles erfasstern Daten 
 
 ## Flussdiagramm V1
 ![Flowdiagramm PROG2](plannerbrunch/docs/flow.jpg "Flow diagram")
