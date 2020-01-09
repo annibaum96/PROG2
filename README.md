@@ -10,7 +10,7 @@ Anhand einer Software kann die Abteilung ihre Termine verwalten und direkt in di
 * Löschen ausgewählter Termine 
 * Zuordnung der verantwortlichen Stufen (Verantwortung)
 * Export in Kalender
-* Anzeige einer Übersicht alles erfasstern Daten 
+* Anzeige einer Übersicht aller erfassten Daten 
 
 ## Flussdiagramm V1
 ![Flowdiagramm PROG2](plannerbrunch/docs/flow.jpg "Flow diagram")
