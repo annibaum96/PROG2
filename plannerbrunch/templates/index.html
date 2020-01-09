@@ -1,15 +1,36 @@
-<!DOCTYPE html>
-<html lang="de">
-	<head>
-		<meta charset="utf-8">
-		<title>Hello</title>
-		<link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
-	</head>
+{% include "header.html" %}
+{% include "navigation.html" %}
+<!--Navigationsbar und header eingefügt, damit Anpassungen nicht in allen .hmtl vorgenommen werden müssen-->
+
 	<body>
-		<form action="{{ url_for('formular') }}" method="POST">
-         <input type = "text" name = "name" placeholder="Bitte Aktivität eintragen" />
-         </br><input class="btn btn-outline-primary" type="submit" value="Speichern">
-         </form>		
-         {{result}}
+		<div class="card">
+  			<div class="card-body">
+    		<h1>Pfadijahr planen</h1>
+  			</div>
+		</div>
+
+<!--Auf der Startseite sind drei Möglichkeiten zur Verfügung: Termin erfassen, Übersicht und Export-->
+		<div class="card-group">
+  			<div class="card">
+    		    <div class="card-body">
+     			 <h5 class="card-title">Neuer Termin erfassen</h5>
+      			<p class="card-text">Hier kannst du einen neuen Pfaditermin erfassen.</p>
+      		    </div>
+ 			 </div>
+ 			 <div class="card">
+   			    <div class="card-body">
+      				<h5 class="card-title">Übersicht</h5>
+      				<p class="card-text">Hier erhältst du einen Überblick aller erfassten Termine.</p>
+      		    </div>
+  			</div>
+  			<div class="card">
+   				<div class="card-body">
+      				<h5 class="card-title">Kalender Export</h5>
+      				<p class="card-text">Hier kannst du die erfassten Termine in deinen Kalender exportieren</p>
+     		    </div>
+  			</div>
+		</div>
 	</body>
-</html>	
+
+</html>
+<!--html-tag hier schliessen, da in header-datei geöffnet-->

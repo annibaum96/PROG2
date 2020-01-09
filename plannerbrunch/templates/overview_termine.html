@@ -1,0 +1,11 @@
+{% include "header.html" %}
+{% include "navigation.html" %}
+<!--Navigationsbar und header eingefügt, damit Anpassungen nicht in allen .hmtl vorgenommen werden müssen-->
+	<body>
+		<form action="{{ url_for('formular') }}" method="POST">
+         <input type = "text" name = "name" placeholder="Bitte Aktivität eintragen" />
+         </br><input class="btn btn-outline-primary" type="submit" value="Speichern">
+         </form>		
+         {{result}}
+	</body>
+</html>	

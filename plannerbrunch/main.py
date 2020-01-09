@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 
-app = Flask("Hello World")
+app = Flask("Planner")
 
 @app.route('/brunch', methods = ['POST', 'GET'])
 def formular():
@@ -9,6 +9,8 @@ def formular():
 		return render_template('index.html',result = result)
 	else:
 		return render_template('index.html')
+
+@app.route('/')
 
 
 if __name__ == "__main__":
