@@ -1,11 +1,60 @@
 {% include "header.html" %}
-{% include "navigation.html" %}
-<!--Navigationsbar und header eingefügt, damit Anpassungen nicht in allen .hmtl vorgenommen werden müssen-->
+<!--Header eingefügt, damit Anpassungen nicht in allen .hmtl vorgenommen werden müssen-->
 	<body>
-		<form action="{{ url_for('formular') }}" method="POST">
-        	 <input type = "text" name = "name" placeholder="Bitte Aktivität eintragen" />
-        	 </br><input class="btn btn-outline-primary" type="submit" value="Speichern">
-         </form>		
-         {{result}}
+		<div class = "container">
+			<form action="{{ url_for('erfassen') }}" method="POST">
+
+			<input class="form-control" type = "text" name = "aktivitaet" placeholder="Bitte Aktivität eintragen" />
+			<br><input class="form-control" type = "date" name = "datum" placeholder="Bitte Datum eintragen" />
+			<br><input class="form-control" type = "time" name = "beginn" placeholder="Bitte Beginn eintragen" />
+			<br><input class="form-control" type = "time" name = "ende" placeholder="Bitte Ende eintragen" />
+			<br><div class="input-group mb-3">
+			<br><div class="input-group-prepend">
+  					<select class="custom-select" name="verantwortung">
+					    <option selected>Verantwortliche Stufe...</option>
+					    <option value="Abteilungsleitung">Abteilungsleitung</option>
+						<option value="Rover- und Pioleitung">Rover- und Pioleitung</option>
+					    <option value="Leiter">Leiter</option>
+					    <option value="Vorstand">Vorstand</option>
+					    <option value="Pios">Pios</option>
+				 	 </select>
+				</div>
+				</div>
+			<br><!-- <div class="form-check">
+					<input class="form-check-input" type="checkbox" name = "beteiligt" value="alle" id="defaultCheck1">
+  					<label class="form-check-label" for="defaultCheck1">Alle</label>
+  				</div> -->
+  				<div class="form-check">
+  					<input class="form-check-input" type="checkbox" name = "beteiligt" value="biberstufe" id="defaultCheck2">
+  					<label class="form-check-label" for="defaultCheck2">Biberstufe</label>
+  				</div>
+  				<div class="form-check">	
+  					<input class="form-check-input" type="checkbox" name = "beteiligt" value="wolfstufe" id="defaultCheck3">
+  					<label class="form-check-label" for="defaultCheck3">Wolfstufe</label>
+  				</div>	
+  				<div class="form-check">
+  					<input class="form-check-input" type="checkbox" name = "beteiligt" value="pfadistufe" id="defaultCheck4">
+  					<label class="form-check-label" for="defaultCheck4">Pfadistufe</label>
+  				</div>	
+  				<div class="form-check">	
+  					<input class="form-check-input" type="checkbox" name = "beteiligt" value="piostufe" id="defaultCheck5">
+  					<label class="form-check-label" for="defaultCheck5">Piostufe</label>
+				</div>	
+  				<div class="form-check">  					
+  					<input class="form-check-input" type="checkbox" name = "beteiligt" value="roverstufe" id="defaultCheck6">
+  					<label class="form-check-label" for="defaultCheck6">Roverstufe</label>
+  				</div>	
+  				<div class="form-check">	
+  					<input class="form-check-input" type="checkbox" name = "beteiligt" value="vorstand" id="defaultCheck7">
+  					<label class="form-check-label" for="defaultCheck7">Vorstand</label>
+  				</div>
+        	</br><input class="btn btn-outline-primary" type="submit" value="Speichern">
+         </form>
+         <br>
+         <div class="col-sm-12">
+         {% if len(akt)!=0 %}	
+         {{akt, who2}}
+         {% endif %}	
+         </div>
 	</body>
 </html>	
