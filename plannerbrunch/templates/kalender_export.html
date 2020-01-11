@@ -1,10 +1,10 @@
 {% include "header.html" %}
-{% include "navigation.html" %}
-
-		<form action="{{ url_for('formular') }}" method="POST">
-         <input type = "text" name = "name" placeholder="Bitte Aktivität eintragen" />
-         </br><input class="btn btn-outline-primary" type="submit" value="Speichern">
-         </form>		
-         {{result}}
-	</body>
-</html>	
+<!--Navigationsbar und header eingefügt, damit Anpassungen nicht in allen .hmtl vorgenommen werden müssen-->
+	<div class="container">
+		<body>
+			<div class="alert alert-info" role="alert">
+	 		Hier wird der Kalender exportiert.
+			</div>	
+		</body>
+	</div>	
+</html>

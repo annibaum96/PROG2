@@ -1,10 +1,8 @@
 <!doctype html>
 <html>
 
-	<head>
-		<head>
-			<title>WÄ Jahresplaner</title>
-		</head>
+		<title>Jahresplaner</title>
+
 	    <!-- Benötigte meta tags. Kurz gehalten, da WebApp vorerst nicht online geht und nur für ausgewählte Personen zur Verfügung steht.-->
 	    <meta charset="utf-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -31,13 +29,13 @@
     <div class="collapse navbar-collapse" id="navbarContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('startseite') }}">Übersicht</a>
+                <a class="nav-link" href="{{ url_for('overview') }}">Übersicht</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('erfassen') }}">Neuer Eintrag</a>
+                <a class="nav-link" href="{{ url_for('erfassen') }}	">Neuer Eintrag</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('startseite') }}">Export Kalender</a>
+                <a class="nav-link" href="{{ url_for('export') }}">Export Kalender</a>
             </li>
             
         </ul>

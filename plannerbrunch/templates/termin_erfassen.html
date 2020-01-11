@@ -1,17 +1,26 @@
 {% include "header.html" %}
+<!-- {% block title %}Aktivität erfassen{% endblock %} -->
 <!--Header eingefügt, damit Anpassungen nicht in allen .hmtl vorgenommen werden müssen-->
 	<body>
 		<div class = "container">
+
+			<h2>Aktivität für den Jahresplaner erfassen</h2>
+			<br>
+
 			<form action="{{ url_for('erfassen') }}" method="POST">
 
 			<input class="form-control" type = "text" name = "aktivitaet" placeholder="Bitte Aktivität eintragen" />
-			<br><input class="form-control" type = "date" name = "datum" placeholder="Bitte Datum eintragen" />
-			<br><input class="form-control" type = "time" name = "beginn" placeholder="Bitte Beginn eintragen" />
-			<br><input class="form-control" type = "time" name = "ende" placeholder="Bitte Ende eintragen" />
+			<br><label for="datum">Datum der Aktivität</label>
+			<input class="form-control" type = "date" name = "datum" placeholder="Bitte Datum eintragen" />
+			<br><label for="beginn">Beginn (ungefähr geplant)</label>
+			<input class="form-control" type = "time" name = "beginn" placeholder="Bitte Beginn eintragen" />
+			<br><label for="ende">Ende (ungefähr geplant)</label>
+			<input class="form-control" type = "time" name = "ende" placeholder="Bitte Ende eintragen" />
+			<br><label for="verantwortung">Wer ist verantwortlich</label>
 			<br><div class="input-group mb-3">
 			<br><div class="input-group-prepend">
   					<select class="custom-select" name="verantwortung">
-					    <option selected>Verantwortliche Stufe...</option>
+					    <option selected>...</option>
 					    <option value="Abteilungsleitung">Abteilungsleitung</option>
 						<option value="Rover- und Pioleitung">Rover- und Pioleitung</option>
 					    <option value="Leiter">Leiter</option>
@@ -24,6 +33,7 @@
 					<input class="form-check-input" type="checkbox" name = "beteiligt" value="alle" id="defaultCheck1">
   					<label class="form-check-label" for="defaultCheck1">Alle</label>
   				</div> -->
+  				<h4>Teilnehmer Stufe</h4>
   				<div class="form-check">
   					<input class="form-check-input" type="checkbox" name = "beteiligt" value="biberstufe" id="defaultCheck2">
   					<label class="form-check-label" for="defaultCheck2">Biberstufe</label>
@@ -40,6 +50,10 @@
   					<input class="form-check-input" type="checkbox" name = "beteiligt" value="piostufe" id="defaultCheck5">
   					<label class="form-check-label" for="defaultCheck5">Piostufe</label>
 				</div>	
+				<div class="form-check">
+  					<input class="form-check-input" type="checkbox" name = "beteiligt" value="leiter" id="defaultCheck2">
+  					<label class="form-check-label" for="defaultCheck2">Aktive Leiter</label>
+  				</div>
   				<div class="form-check">  					
   					<input class="form-check-input" type="checkbox" name = "beteiligt" value="roverstufe" id="defaultCheck6">
   					<label class="form-check-label" for="defaultCheck6">Roverstufe</label>
@@ -51,10 +65,6 @@
         	</br><input class="btn btn-outline-primary" type="submit" value="Speichern">
          </form>
          <br>
-         <div class="col-sm-12">
-         {% if len(akt)!=0 %}	
-         {{akt, who2}}
-         {% endif %}	
-         </div>
+        </div>
 	</body>
 </html>	
