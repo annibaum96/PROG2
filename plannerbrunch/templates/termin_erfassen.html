@@ -6,7 +6,16 @@
 
 			<h2>Aktivität für den Jahresplaner erfassen</h2>
 			<br>
-
+         {% with messages = get_flashed_messages() %}
+  			{% if messages %}
+ 				{% for message in messages %}
+   					<div class="alert alert-success" role="alert">
+   						{{ message }}
+					</div>
+				{% endfor %}
+			{% endif %}
+		{% endwith %}
+		{% block body %}{% endblock %}
 			<form action="{{ url_for('erfassen') }}" method="POST">
 
 			<input class="form-control" type = "text" name = "aktivitaet" placeholder="Bitte Aktivität eintragen" />
@@ -65,6 +74,7 @@
         	</br><input class="btn btn-outline-primary" type="submit" value="Speichern">
          </form>
          <br>
+
         </div>
 	</body>
 </html>	
