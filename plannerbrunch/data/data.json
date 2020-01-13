@@ -1,0 +1,40 @@
+{
+  "Leiterplausch": {
+    "datum": "2020-03-10",
+    "beginn": "10:00",
+    "ende": "12:00",
+    "verantwortung": "Rover- und Pioleitung",
+    "beteiligung": [
+      "piostufe",
+      "roverstufe"
+    ]
+  }
+}{
+  "h\u00f6ck": {
+    "datum": "2020-09-28",
+    "beginn": "10:00",
+    "ende": "19:00",
+    "verantwortung": "Vorstand",
+    "beteiligung": [
+      "piostufe",
+      "leiter",
+      "roverstufe"
+    ]
+  }
+}{
+  "h\u00f6ck": {
+    "datum": "",
+    "beginn": "",
+    "ende": "",
+    "verantwortung": "...",
+    "beteiligung": []
+  }
+}{
+    "Leiterh\u00f6ck 2.0": {
+        "datum": "2020-07-15",
+        "beginn": "19:00",
+        "ende": "10:00",
+        "verantwortung": "...",
+        "beteiligung": []
+    }
+}

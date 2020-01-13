@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, flash
-from libs import speichern_aktivitaeten
+from libs import data
 
 app = Flask("Planner")
 app.secret_key = 'kn/Ujlkm#[sdfnop]jnnq/km*'
@@ -29,7 +29,7 @@ def erfassen():
 		time2=request.form['ende']
 		who=request.form['verantwortung']
 		who2=request.form.getlist('beteiligt')
-		input_data = speichern_aktivitaeten.aktivitaet_speichern(akt, date, time, time2, who, who2)
+		data.speichern(akt, date, time, time2, who, who2)
 		return render_template('termin_erfassen.html', len=len, akt=akt, who2=who2)
 
 	else:
