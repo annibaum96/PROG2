@@ -1,10 +1,51 @@
 {% include "header.html" %}
 <!--Navigationsbar und header eingefügt, damit Anpassungen nicht in allen .hmtl vorgenommen werden müssen-->
+
+<body>
 	<div class="container">
-		<body>
-			<div class="alert alert-info" role="alert">
-	 		Hier wird die Übersicht aller Aktivitäten erscheinen.
-			</div>	
+		<h2>Übersicht aller erfassten Termine</h2>
+			<br>
+		{% with messages = get_flashed_messages() %}
+  			{% if messages %}
+ 				{% for message in messages %}
+   					<div class="alert alert-danger" role="alert">
+   						{{ message }}
+					</div>
+				{% endfor %}
+			{% endif %}
+		{% endwith %}
+		{% block body %}{% endblock %}
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Datum</th>
+            <th scope="col">Aktivität</th>
+            <th scope="col">Beginn</th>
+            <th scope="col">Ende</th>
+            <th scope="col">TN Stufe</th>
+            <th scope="col">Verantwortlich</th>
+            <th scope="col">Löschen</th>
+          </tr>
+        </thead>
+        <tbody>
+
+
+          
+          {%for data in jahresplan.values()%}
+          <tr>
+            <td>{{data["Datum"]}}</td>
+            <td>{{data["Aktivität"]}}</td>
+            <td>{{data["Beginn"]}}</td>
+            <td>{{data["Ende"]}}</td>
+            <td>{{data["Stufe TN"]}}</td>
+            <td>{{data["Verantwortung"]}}</td>
+            <td> <a href="http://127:0.0.1:5000/delete/{{aktivitaet}}" class="btn btn-outlined-danger btn-sm" role="button">Löschen</a></td>
+          </tr>
+         {% endfor %}
+
+
+        </tbody>
+      </table>
 		</body>
 	</div>	
 </html>

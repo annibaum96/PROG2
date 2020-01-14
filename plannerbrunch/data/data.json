@@ -1,40 +1,61 @@
 {
-  "Leiterplausch": {
-    "datum": "2020-03-10",
-    "beginn": "10:00",
-    "ende": "12:00",
-    "verantwortung": "Rover- und Pioleitung",
-    "beteiligung": [
-      "piostufe",
-      "roverstufe"
-    ]
-  }
-}{
-  "h\u00f6ck": {
-    "datum": "2020-09-28",
-    "beginn": "10:00",
-    "ende": "19:00",
-    "verantwortung": "Vorstand",
-    "beteiligung": [
-      "piostufe",
-      "leiter",
-      "roverstufe"
-    ]
-  }
-}{
-  "h\u00f6ck": {
-    "datum": "",
-    "beginn": "",
-    "ende": "",
-    "verantwortung": "...",
-    "beteiligung": []
-  }
-}{
-    "Leiterh\u00f6ck 2.0": {
-        "datum": "2020-07-15",
-        "beginn": "19:00",
-        "ende": "10:00",
-        "verantwortung": "...",
-        "beteiligung": []
+    "Leiterhöck": {
+        "Aktivität": "Leiterhöck",
+        "Datum": "2020-05-27",
+        "Beginn": "19:00",
+        "Ende": "21:00",
+        "Verantwortung": "Abteilungsleitung",
+        "Stufe TN": [
+            "piostufe",
+            "leiter",
+            "roverstufe"
+        ]
+    },
+    "Abteilungsolympiade": {
+        "Aktivität": "Abteilungsolympiade",
+        "Datum": "2020-04-13",
+        "Beginn": "11:00",
+        "Ende": "17:00",
+        "Verantwortung": "Leiter",
+        "Stufe TN": [
+            "biberstufe",
+            "wolfstufe",
+            "pfadistufe"
+        ]
+    },
+    "Wasserplausch": {
+        "Aktivität": "Wasserplausch",
+        "Datum": "2020-09-23",
+        "Beginn": "09:00",
+        "Ende": "16:30",
+        "Verantwortung": "Rover- und Pioleitung",
+        "Stufe TN": [
+            "piostufe",
+            "leiter",
+            "roverstufe"
+        ]
+    },
+    "Silvesterlager Meiringen": {
+        "Aktivität": "Silvesterlager Meiringen",
+        "Datum": "2020-12-27",
+        "Beginn": "15:00",
+        "Ende": "23:30",
+        "Verantwortung": "Rover- und Pioleitung",
+        "Stufe TN": [
+            "leiter",
+            "roverstufe"
+        ]
+    },
+    "Winterplausch": {
+        "Aktivität": "Winterplausch",
+        "Datum": "2020-02-14",
+        "Beginn": "18:00",
+        "Ende": "23:00",
+        "Verantwortung": "Rover- und Pioleitung",
+        "Stufe TN": [
+            "pfadistufe",
+            "piostufe",
+            "leiter"
+        ]
     }
 }
