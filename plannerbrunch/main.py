@@ -48,12 +48,6 @@ def erfassen():
 		flash('Die Aktivität wurde erfolgreich erfasst.')
 		akt=request.form['aktivitaet']
 		date=request.form['datum']
-		date = date.split("-")
-		DD = str(date[2])
-		MM = str(date[1])
-		YYYY = str(date[0])
-		date = DD + "." +  MM + "." + YYYY
-		print(date)
 		time=request.form['beginn']
 		time2=request.form['ende']
 		who=request.form['verantwortung']

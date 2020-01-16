@@ -53,6 +53,18 @@ def aktivitaet_speichern(name, date, beginn, ende, verantwortung, beteiligung):
     Returns:
     current json file.  
     """
+    #split date for nice format
+    date = date.split("-")
+    DD = str(date[2])
+    MM = str(date[1])
+    YYYY = str(date[0])
+    date = DD + "." +  MM + "." + YYYY
+	#reformat list from 'beteiligung' for nice output
+    seperator = ", "
+    beteiligung = seperator.join(beteiligung)
+
+    name = name.capitalize()
+
     json_daten = load_json(name)
     json_daten[name] = {
         "Aktivität": name, "Datum": date, "Beginn": beginn, "Ende": ende, "Verantwortung": verantwortung, "Stufe TN": beteiligung

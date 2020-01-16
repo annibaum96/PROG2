@@ -1,69 +1,26 @@
 {
-    "Fasnacht": {
-        "Aktivität": "Fasnacht",
-        "Datum": "2020-03-12",
+    "Höck": {
+        "Aktivität": "Höck",
+        "Datum": "23.04.2020",
         "Beginn": "19:00",
-        "Ende": "21:00",
-        "Verantwortung": "Rover- und Pioleitung",
-        "Stufe TN": [
-            "Piostufe",
-            "Leiter",
-            "Roverstufe"
-        ]
-    },
-    "Leiterhöck 1": {
-        "Aktivität": "Leiterhöck",
-        "Datum": "2020-04-13",
-        "Beginn": "19:00",
-        "Ende": "21:30",
-        "Verantwortung": "Abteilungsleitung",
-        "Stufe TN": [
-            "leiter"
-        ]
-    },
-    "Jahresabschluss": {
-        "Aktivität": "Jahresabschluss",
-        "Datum": "2020-12-20",
-        "Beginn": "18:00",
         "Ende": "23:00",
         "Verantwortung": "Abteilungsleitung",
-        "Stufe TN": []
-    },  
-    "Leiterplausch": {
-        "Aktivität": "Leiterplausch",
-        "Datum": "2020-09-27",
+        "Stufe TN": "Pfadistufe, Leiter, Roverstufe, Vorstand"
+    },
+    "Wasserplausch": {
+        "Aktivität": "Wasserplausch",
+        "Datum": "27.08.2020",
+        "Beginn": "11:00",
+        "Ende": "17:00",
+        "Verantwortung": "Rover- und Pioleitung",
+        "Stufe TN": "Piostufe, Leiter, Roverstufe"
+    },
+    "Horrornacht": {
+        "Aktivität": "Horrornacht",
+        "Datum": "31.10.2020",
         "Beginn": "09:00",
-        "Ende": "16:00",
-        "Verantwortung": "Vorstand",
-        "Stufe TN": [
-            "piostufe",
-            "leiter",
-            "roverstufe",
-            "vorstand"
-        ]
-    },
-    "Winterplausch": {
-        "Aktivität": "Winterplausch",
-        "Datum": "2020-02-16",
-        "Beginn": "18:00",
-        "Ende": "23:00",
+        "Ende": "10:00",
         "Verantwortung": "Rover- und Pioleitung",
-        "Stufe TN": [
-            "piostufe",
-            "leiter",
-            "roverstufe"
-        ]
-    },
-    "Leiterhöck 2": {
-        "Aktivität": "Leiterhöck",
-        "Datum": "2020-05-13",
-        "Beginn": "19:00",
-        "Ende": "21:30",
-        "Verantwortung": "Abteilungsleitung",
-        "Stufe TN": [
-            "piostufe",
-            "leiter",
-            "roverstufe"
-        ]
+        "Stufe TN": "Pfadistufe, Piostufe, Leiter, Roverstufe"
     }
 }
