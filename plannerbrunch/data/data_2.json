@@ -1,16 +1,4 @@
 {
-    "Fasnacht": {
-        "Aktivität": "Fasnacht",
-        "Datum": "2020-03-12",
-        "Beginn": "19:00",
-        "Ende": "21:00",
-        "Verantwortung": "Rover- und Pioleitung",
-        "Stufe TN": [
-            "Piostufe",
-            "Leiter",
-            "Roverstufe"
-        ]
-    },
     "Leiterhöck 1": {
         "Aktivität": "Leiterhöck",
         "Datum": "2020-04-13",
@@ -66,4 +54,5 @@
             "roverstufe"
         ]
     }
+}
 }

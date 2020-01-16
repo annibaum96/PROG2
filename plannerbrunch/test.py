@@ -13,20 +13,49 @@ def load_overview():
         print("Es sind noch keine Termine erfasst.")
     return data
 
-def eintrag_loeschen(name):
-    daten = load_overview()
-    for d in daten:
-        if d == name:
-            
-    
+def table(aktivitaet):
+    jahresplan = load_overview()
+    eintrag = jahresplan[aktivitaet]["Stufe TN"]
+    for d in eintrag:
+        print(d)
 
-
-
-
-
+table("Leiterhöck 1")
 
 
 """
+
+def darstellung():
+    jahresplan = load_overview()
+    aktivitaeten = []
+    for eintrag in jahresplan:
+        aktivitaeten.append(eintrag)
+    
+    
+    for a in aktivitaeten: 
+        eintrag = jahresplan[a]["Stufe TN"]
+        for stufe in eintrag:
+            stufe = stufe.capitalize()
+            return(stufe)
+
+darstellung()
+"""
+ 
+
+
+"""
+    eintrag = jahresplan[aktivitaet]["Stufe TN"]
+    for data in eintrag:
+        stufe = data.capitalize() 
+
+
+
+def delete_aktivitaet(aktivitaet):
+    jahresplan = load_overview()
+    eintrag = jahresplan[aktivitaet]
+    print(eintrag)
+
+delete_aktivitaet("Winterplausch")
+    
 def overview():
     jahresplan = load_overview()
     for data in jahresplan.values():

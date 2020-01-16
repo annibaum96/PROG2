@@ -6,6 +6,7 @@
 
 			<h2>Aktivität für den Jahresplaner erfassen</h2>
 			<br>
+      <!-- Flash-Nachricht einbinden, welche bei Action erscheint -->
          {% with messages = get_flashed_messages() %}
   			{% if messages %}
  				{% for message in messages %}
@@ -17,7 +18,7 @@
 		{% endwith %}
 		{% block body %}{% endblock %}
 			<form action="{{ url_for('erfassen') }}" method="POST">
-
+      <!-- Beinhaltet alle relevanten Informationen, die vom User eingegeben werden müssen.-->
 			<input class="form-control" type = "text" name = "aktivitaet" placeholder="Bitte Aktivität eintragen" />
 			<br><label for="datum">Datum der Aktivität</label>
 			<input class="form-control" type = "date" name = "datum"/>
@@ -38,37 +39,34 @@
 				 	 </select>
 				</div>
 				</div>
-			<br><!-- <div class="form-check">
-					<input class="form-check-input" type="checkbox" name = "beteiligt" value="alle" id="defaultCheck1">
-  					<label class="form-check-label" for="defaultCheck1">Alle</label>
-  				</div> -->
+			<br>
   				<h4>Teilnehmer Stufe</h4>
   				<div class="form-check">
-  					<input class="form-check-input" type="checkbox" name = "beteiligt" value="biberstufe" id="defaultCheck2">
+  					<input class="form-check-input" type="checkbox" name = "beteiligt" value="Biberstufe" id="defaultCheck2">
   					<label class="form-check-label" for="defaultCheck2">Biberstufe</label>
   				</div>
   				<div class="form-check">	
-  					<input class="form-check-input" type="checkbox" name = "beteiligt" value="wolfstufe" id="defaultCheck3">
+  					<input class="form-check-input" type="checkbox" name = "beteiligt" value="Wolfstufe" id="defaultCheck3">
   					<label class="form-check-label" for="defaultCheck3">Wolfstufe</label>
   				</div>	
   				<div class="form-check">
-  					<input class="form-check-input" type="checkbox" name = "beteiligt" value="pfadistufe" id="defaultCheck4">
+  					<input class="form-check-input" type="checkbox" name = "beteiligt" value="Pfadistufe" id="defaultCheck4">
   					<label class="form-check-label" for="defaultCheck4">Pfadistufe</label>
   				</div>	
   				<div class="form-check">	
-  					<input class="form-check-input" type="checkbox" name = "beteiligt" value="piostufe" id="defaultCheck5">
+  					<input class="form-check-input" type="checkbox" name = "beteiligt" value="Piostufe" id="defaultCheck5">
   					<label class="form-check-label" for="defaultCheck5">Piostufe</label>
 				</div>	
 				<div class="form-check">
-  					<input class="form-check-input" type="checkbox" name = "beteiligt" value="leiter" id="defaultCheck2">
+  					<input class="form-check-input" type="checkbox" name = "beteiligt" value="Leiter" id="defaultCheck2">
   					<label class="form-check-label" for="defaultCheck2">Aktive Leiter</label>
   				</div>
   				<div class="form-check">  					
-  					<input class="form-check-input" type="checkbox" name = "beteiligt" value="roverstufe" id="defaultCheck6">
+  					<input class="form-check-input" type="checkbox" name = "beteiligt" value="Roverstufe" id="defaultCheck6">
   					<label class="form-check-label" for="defaultCheck6">Roverstufe</label>
   				</div>	
   				<div class="form-check">	
-  					<input class="form-check-input" type="checkbox" name = "beteiligt" value="vorstand" id="defaultCheck7">
+  					<input class="form-check-input" type="checkbox" name = "beteiligt" value="Vorstand" id="defaultCheck7">
   					<label class="form-check-label" for="defaultCheck7">Vorstand</label>
   				</div>
         	</br><input class="btn btn-outline-info" type="submit" value="Speichern">

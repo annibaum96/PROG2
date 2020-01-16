@@ -1,10 +1,11 @@
 {% include "header.html" %}
-<!--Navigationsbar und header eingefügt, damit Anpassungen nicht in allen .hmtl vorgenommen werden müssen-->
+<!--Header eingefügt, damit Anpassungen nicht in allen .hmtl vorgenommen werden müssen-->
 
 <body>
 	<div class="container">
 		<h2>Übersicht aller erfassten Termine</h2>
 			<br>
+		<!-- Flash-Nachricht einbinden, welche bei Action erscheint -->
 		{% with messages = get_flashed_messages() %}
   			{% if messages %}
  				{% for message in messages %}
@@ -15,22 +16,24 @@
 			{% endif %}
 		{% endwith %}
 		{% block body %}{% endblock %}
-      <table class="table table-striped">
+	<form action="{{ url_for('overview') }}" method="POST">
+      <table class="table table-bordered table-hover table-striped" >
         <thead>
-          <tr>
-            <th scope="col">Datum</th>
-            <th scope="col">Aktivität</th>
-            <th scope="col">Beginn</th>
-            <th scope="col">Ende</th>
-            <th scope="col">TN Stufe</th>
-            <th scope="col">Verantwortlich</th>
-            <th scope="col">Löschen</th>
+          <tr> 
+            <th data-field="date" data-sortable="true" data-sort-name="id" data-sort-order="desc">Datum</th>
+            <th data-field="aktivität">Aktivität</th>
+            <th data-field="beginn">Beginn</th>
+            <th data-field="ende">Ende</th>
+            <th data-field="tn">TN Stufe</th>
+            <th data-field="verantwortlich">Verantwortlich</th>
+            <th data-field="löschen">Löschen</th>
           </tr>
         </thead>
         <tbody>
 
 
-          
+
+          <!-- Füllt Tabelle mitttels For-Schleife mit allen Einträgen welche in aktueller json-Datei sind. -->
           {%for data in jahresplan.values()%}
           <tr>
             <td>{{data["Datum"]}}</td>
@@ -39,13 +42,15 @@
             <td>{{data["Ende"]}}</td>
             <td>{{data["Stufe TN"]}}</td>
             <td>{{data["Verantwortung"]}}</td>
-            <td> <a href="http://127:0.0.1:5000/delete/{{aktivitaet}}" class="btn btn-outlined-danger btn-sm" role="button">Löschen</a></td>
+            <td>
+            	<input class="form-control" type = "radio" name = "eintrag" value = "{{data['Aktivität']}}" /></td>	
           </tr>
          {% endfor %}
 
-
+         
         </tbody>
       </table>
+      <p align = "right"><input type = "submit" value = "löschen" class="btn btn-outline-danger" role="button"></p>
 		</body>
 	</div>	
 </html>
