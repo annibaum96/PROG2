@@ -14,7 +14,7 @@ app = Flask("Planner")
 app.secret_key = 'kn/Ujlkm#[sdfnop]jnnq/km*'
 
 #Startseite
-@app.route('/index', methods = ['POST', 'GET'])
+@app.route('/index')
 @app.route('/')
 def startseite():
 	"""
@@ -25,11 +25,7 @@ def startseite():
     Returns:
     Index.html, which shows only NavBar and a Message. 
     """
-	if request.method == 'POST':
-		result=request.form['name']
-		return render_template('index.html',result = result)
-	else:
-		return render_template('index.html')
+	return render_template('index.html')
 
 
 #Seite um eine Aktivität nach der anderen zu erfassen
@@ -75,7 +71,8 @@ def overview():
 		result=request.form['eintrag']
 		del jahresplan[result]
 		data.save_json(jahresplan)
-		return render_template('overview_termine.html', jahresplan = jahresplan)
+		anzahl = data.count_entrys()
+		return render_template('overview_termine.html', jahresplan = jahresplan, anzahl = anzahl)
 	else:
 		jahresplan = data.load_overview()
 		anzahl = data.count_entrys()

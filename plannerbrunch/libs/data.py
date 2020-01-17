@@ -12,6 +12,7 @@ Returns:
 New json file, content of json file.
 """
 import json
+from flask import Flask, flash
 
 """
 Summary: 
@@ -84,8 +85,10 @@ def load_overview():
 		with open("data/data.json") as f: 
 			data = json.load(f)
 	except FileNotFoundError:
-		print("Es sind noch keine Termine erfasst.")
+			data = {
+			}
 	return data
+	
 
 def count_entrys():
 	"""
