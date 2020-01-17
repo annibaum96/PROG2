@@ -88,6 +88,13 @@ def load_overview():
 	return data
 
 def count_entrys():
+	"""
+	Summary: 
+	Function for adding up the entrys.
+
+	return: 
+	amount of entrys in current dict. 
+	"""
 	jahresplan = load_overview()
 	eintraege = [] 
 	for a in jahresplan:

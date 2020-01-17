@@ -63,7 +63,7 @@ def erfassen():
 def overview():
 	"""
     Summary: 
-    Shows table of all activites entered (saved in json file). 
+    Shows table of all activites entered (saved in json file) including current amount of entrys in json-file. 
     Possibility to delete an entry --> will flash a message. 
             
     Returns:
@@ -80,19 +80,6 @@ def overview():
 		jahresplan = data.load_overview()
 		anzahl = data.count_entrys()
 		return render_template('overview_termine.html', jahresplan = jahresplan, anzahl = anzahl)
-
-# def darstellung(): 
-# 	jahresplan = data.load_overview()
-# 	aktivitaeten = []
-# 	for eintrag in jahresplan:
-# 		aktivitaeten.append(eintrag)
-
-# 	for a in aktivitaeten:
-# 		eintrag = jahresplan[a]["Stufe TN"]
-# 		for stufe in eintrag:
-# 			stufe = stufe.capitalize()
-# 			return stufe
-# 			return render_template('overview_termine.html', stufe = stufe)
 
 #Seite um gesamte erfassten Daten in Kalender zu exportieren
 @app.route('/kalender', methods = ['POST', 'GET'])
