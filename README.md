@@ -12,7 +12,8 @@ Anhand einer Software kann die Abteilung ihre Termine verwalten und direkt in di
 * Anzeige einer Übersicht aller erfassten Daten 
 
 ## Next Steps
-* Erasste Termine bearbeiten
+* Erfasste Termine bearbeiten
+* Möglichkeit bei Verantwortung "Alle"; Automatisch alle Kategorien mit einbeziehen
 * Jahre abgrenzen / vergangene archivieren
 * Export in Kalender
 * Sortieren Übersicht
