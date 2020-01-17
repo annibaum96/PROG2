@@ -12,7 +12,6 @@ Returns:
 New json file, content of json file.
 """
 import json
-from flask import Flask, flash
 
 """
 Summary: 
