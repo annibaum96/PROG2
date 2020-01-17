@@ -17,5 +17,5 @@ Anhand einer Software kann die Abteilung ihre Termine verwalten und direkt in di
 * Export in Kalender
 * Sortieren Übersicht
 
-## Flussdiagramm V1
+## Flussdiagramm V3
 ![Flowdiagramm PROG2](plannerbrunch/docs/flow_2.png "Flow diagram")
