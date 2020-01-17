@@ -1,12 +1,4 @@
 {
-    "Höck": {
-        "Aktivität": "Höck",
-        "Datum": "23.04.2020",
-        "Beginn": "19:00",
-        "Ende": "23:00",
-        "Verantwortung": "Abteilungsleitung",
-        "Stufe TN": "Pfadistufe, Leiter, Roverstufe, Vorstand"
-    },
     "Wasserplausch": {
         "Aktivität": "Wasserplausch",
         "Datum": "27.08.2020",
@@ -15,12 +7,20 @@
         "Verantwortung": "Rover- und Pioleitung",
         "Stufe TN": "Piostufe, Leiter, Roverstufe"
     },
-    "Horrornacht": {
-        "Aktivität": "Horrornacht",
-        "Datum": "31.10.2020",
+    "Heimfest": {
+        "Aktivität": "Heimfest",
+        "Datum": "14.07.2020",
+        "Beginn": "14:00",
+        "Ende": "20:30",
+        "Verantwortung": "Abteilungsleitung",
+        "Stufe TN": "Biberstufe, Wolfstufe, Pfadistufe, Piostufe, Leiter, Roverstufe, Vorstand"
+    },
+    "Roverweekend": {
+        "Aktivität": "Roverweekend",
+        "Datum": "23.09.2020",
         "Beginn": "09:00",
-        "Ende": "10:00",
+        "Ende": "22:00",
         "Verantwortung": "Rover- und Pioleitung",
-        "Stufe TN": "Pfadistufe, Piostufe, Leiter, Roverstufe"
+        "Stufe TN": "Piostufe, Leiter, Roverstufe"
     }
 }

@@ -87,3 +87,11 @@ def load_overview():
 		print("Es sind noch keine Termine erfasst.")
 	return data
 
+def count_entrys():
+	jahresplan = load_overview()
+	eintraege = [] 
+	for a in jahresplan:
+		eintraege.append(a)
+
+	anz = int(len(eintraege))
+	return anz

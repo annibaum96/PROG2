@@ -78,7 +78,8 @@ def overview():
 		return render_template('overview_termine.html', jahresplan = jahresplan)
 	else:
 		jahresplan = data.load_overview()
-		return render_template('overview_termine.html', jahresplan = jahresplan)
+		anzahl = data.count_entrys()
+		return render_template('overview_termine.html', jahresplan = jahresplan, anzahl = anzahl)
 
 # def darstellung(): 
 # 	jahresplan = data.load_overview()

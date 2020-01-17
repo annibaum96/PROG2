@@ -19,9 +19,9 @@
 		{% block body %}{% endblock %}
 			<form action="{{ url_for('erfassen') }}" method="POST">
       <!-- Beinhaltet alle relevanten Informationen, die vom User eingegeben werden müssen.-->
-			<input class="form-control" type = "text" name = "aktivitaet" placeholder="Bitte Aktivität eintragen" />
+			<input class="form-control" type = "text" name = "aktivitaet" placeholder="Bitte Aktivität eintragen" required />
 			<br><label for="datum">Datum der Aktivität</label>
-			<input class="form-control" type = "date" name = "datum"/>
+			<input class="form-control" type = "date" name = "datum" required />
 			<br><label for="beginn">Beginn (ungefähr geplant)</label>
 			<input class="form-control" type = "time" name = "beginn"/>
 			<br><label for="ende">Ende (ungefähr geplant)</label>
