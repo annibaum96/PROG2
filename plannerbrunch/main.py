@@ -2,8 +2,8 @@
 Summary: 
     Main python file. Includes app routes and their functions.
 Attributes:
-    app: Description.
-    app.secret_key: Description. Needed for flash messages. 
+    app: Name.
+    app.secret_key: Needed for flash messages. 
 """
 
 from flask import Flask, render_template, request, flash
@@ -19,7 +19,7 @@ app.secret_key = 'kn/Ujlkm#[sdfnop]jnnq/km*'
 def startseite():
 	"""
     Summary: 
-    Starts webpage. 
+    Starts webpage. No input.
     From there a User can navigate to "Eintrag erfassen", "Übericht" or "Export Calendar".   
         
     Returns:
@@ -33,8 +33,10 @@ def startseite():
 def erfassen():
 	"""
     Summary: 
-    Page to add a new activity/date. User needs to fill in Input forms.
-    The details will be saved in a json file.
+    Page to add a new activity/date. 
+
+    Input: 
+    User fills in the details for event, will be saved in a json file.
     If User presses the "Speichern"-Button, it will flash a Message as Confirmation.
 
     Returns:
@@ -60,7 +62,10 @@ def overview():
 	"""
     Summary: 
     Shows table of all activites entered (saved in json file) including current amount of entrys in json-file. 
-    Possibility to delete an entry --> will flash a message. 
+    If non existing file or emtpy file = empty table.
+
+    Input:
+    Possibility to delete an entry --> will flash a message, update number of current entrys in json-file, update table.
             
     Returns:
     Overview.  
